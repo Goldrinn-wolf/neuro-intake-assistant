@@ -1,0 +1,10 @@
+
+.review-note{min-height:230px;max-height:460px;line-height:1.9;font-size:14px;resize:vertical}
+.review-card a{color:#08695d;font-size:13px}
+.compact-instructions{padding:5px 10px;margin:8px 0}.compact-instructions summary{font-size:12px}
+.muscle-entry,.reflex-entry{padding:5px 0;margin-bottom:7px}.muscle-entry summary,.reflex-entry summary{font-size:12px}
+#tabs{position:sticky;top:0;background:#f3f6f5;z-index:4}
+#steps{position:sticky;top:49px;background:#f3f6f5;z-index:3;padding:7px 0}
+.exam,.sectionhead,.question,.screening-row{scroll-margin-top:155px}
+@media(max-width:650px){#steps{top:48px}.review-note{min-height:240px}}
+

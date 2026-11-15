@@ -1,0 +1,45 @@
+.desktop-copy{display:none}
+.desktop-app body{height:100vh;overflow:hidden;font-size:14px}
+.desktop-app header{display:none}
+.desktop-app .shell{height:100vh;min-height:0;max-width:none;grid-template-columns:172px minmax(380px,1fr) 300px}
+.desktop-app .sidebar,.desktop-app main,.desktop-app .right{min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.desktop-app .sidebar{padding:20px 12px}
+.desktop-app .sidebar h2{font-size:16px;margin:0 8px 14px}
+.desktop-app .sidebar button{margin:5px 0;line-height:1.6}
+.desktop-app .sidebar #records>.primary,.desktop-app .sidebar #records>.small-actions{display:none}
+.desktop-app main{padding:22px 24px 40px}
+.desktop-app .title p{margin-bottom:6px;letter-spacing:.5px}
+.desktop-app h1{font-size:24px;line-height:1.5}
+.desktop-app h2{font-size:18px}
+.desktop-app h3{font-size:16px}
+.desktop-app #tabs{margin:16px 0 8px;top:-22px;padding-top:10px}
+.desktop-app #steps{top:31px;padding:8px 0;margin-bottom:14px}
+.desktop-app .card{padding:18px;border-radius:10px;margin-bottom:12px}
+.desktop-app .right{grid-column:auto;padding:22px 16px 24px 0}
+.desktop-app .right .card{padding:16px}
+.desktop-app #live{max-height:42vh;font-size:13px;line-height:1.95;padding-right:4px}
+.desktop-app .desktop-copy{display:inline-block;font-size:12px;padding:5px 11px;color:#08695d}
+.desktop-app .right .primary{width:100%;padding:10px}
+.desktop-app #gaps{max-height:none}
+.desktop-app .symptom-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.desktop-app .symptom-grid button{min-height:76px}
+.desktop-app .question,.desktop-app .exam{scroll-margin-top:160px}
+.desktop-app body[data-stage="病历预览"] .shell{grid-template-columns:172px minmax(0,1fr)}
+.desktop-app body[data-stage="病历预览"] .right{display:none}
+.desktop-app body[data-stage="病历预览"] .title{display:none}
+.desktop-app body[data-stage="病历预览"] #tabs{margin:0 0 12px}
+.desktop-app body[data-stage="病历预览"] #workspace>.card:first-child{padding:10px 14px;background:#edf5f1;border:0}
+.desktop-app body[data-stage="病历预览"] #workspace>.card:first-child h3{display:none}
+.desktop-app body[data-stage="病历预览"] #workspace>.card:first-child .why{margin:0;font-size:12px}
+.desktop-app body[data-stage="病历预览"] #workspace>.card:first-child a{font-size:11px;color:#417467}
+.desktop-app body[data-stage="病历预览"] #workspace{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.desktop-app body[data-stage="病历预览"] #workspace>.card{margin:0}
+.desktop-app body[data-stage="病历预览"] #workspace>.card:first-child,.desktop-app body[data-stage="病历预览"] #workspace>button{grid-column:1/-1}
+.desktop-app .review-note{min-height:300px;max-height:65vh;background:#fff;line-height:2;font-size:14px}
+.desktop-app .review-card .spread{gap:8px;flex-wrap:wrap}
+.desktop-app .review-card .why{min-height:42px}
+.desktop-app ::-webkit-scrollbar{width:8px;height:8px}
+.desktop-app ::-webkit-scrollbar-thumb{background:#c6d4ce;border:2px solid #f3f6f5;border-radius:6px}
+@media(max-width:1100px){.desktop-app .shell{grid-template-columns:145px minmax(0,1fr) 260px}.desktop-app main{padding:18px}.desktop-app #tabs{top:-18px}.desktop-app #steps{top:35px}.desktop-app .right{padding:18px 12px 20px 0}.desktop-app .sidebar{padding:18px 8px}.desktop-app .symptom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.desktop-app body[data-stage="病历预览"] .shell{grid-template-columns:145px minmax(0,1fr)}}
+@media(max-width:900px){.desktop-app .shell{grid-template-columns:135px minmax(0,1fr)}.desktop-app .right{display:none}.desktop-app body[data-stage="病历预览"] .shell{grid-template-columns:135px minmax(0,1fr)}.desktop-app body[data-stage="病历预览"] #workspace{grid-template-columns:1fr}.desktop-app .review-note{min-height:240px}.desktop-app .symptom-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.desktop-app .shell,.desktop-app body[data-stage="病历预览"] .shell{display:block}.desktop-app .sidebar{display:none}.desktop-app main{height:100vh;padding:14px}.desktop-app #tabs{top:-14px}.desktop-app #steps{top:39px}.desktop-app h1{font-size:21px}.desktop-app .symptom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.desktop-app .symptom-grid button{min-height:48px}.desktop-app .entry-branches{grid-template-columns:1fr}.desktop-app .card{padding:14px}}

@@ -1,0 +1,17 @@
+
+.quick-number{display:flex;align-items:center;gap:8px;margin:10px 0;font-size:13px}
+.quick-number input{width:90px;margin-left:8px;border:1px solid #b7cfc4;border-radius:5px;padding:7px}
+.quick-number select{padding:7px;border:1px solid #b7cfc4;background:white;border-radius:5px}
+.profile-group{margin-top:14px}.profile-group h4{margin:0;font-size:13px;color:#506f64}
+.operation,.significance{background:#f7faf8;padding:8px 12px;border-radius:7px;margin:10px 0}
+.operation p,.operation li,.significance p{font-size:12px;line-height:1.9}.operation ol{padding-left:20px}
+.significance summary{font-size:12px;color:#457264}
+.priority{border-left:5px solid #b88018;background:linear-gradient(90deg,#fffaf0 0,#fff 42%)}
+.priority-reason{font-size:12px;line-height:1.7;color:#80580f;margin:8px 0}
+.focus-box{background:#fff7e8;border-left:3px solid #b88018;padding:12px;margin-bottom:18px;border-radius:5px}
+.focus-box button{background:transparent}.focus-box h3{color:#79550f}.scope-note{color:#785b22}
+.free-history{min-height:280px;margin-top:14px;font-size:14px}
+.sidebar button.primary{background:var(--green);color:white;font-weight:bold}
+
+
+

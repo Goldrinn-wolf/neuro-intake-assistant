@@ -1,0 +1,24 @@
+{
+  "sdk": {
+    "version": "1.0.1518.46",
+    "url": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.1518.46/microsoft.web.webview2.1.0.1518.46.nupkg",
+    "sha256": "63020b2d569d09a2098ae1ca20dd4cc281885f794aa00fc8812c6ab52dd49618"
+  },
+  "runtime-x86": {
+    "version": "109.0.1518.140",
+    "url": "https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2023/09/microsoftedgestandaloneinstallerx86_179f59bc54d73843d9288a9fd5609de0e507b911.exe",
+    "sha256": "60b22c71128f10abc5e92dd8fed90ff6ca55b8382ba01e48d87faf1664746a31"
+  },
+  "runtime-x64": {
+    "version": "109.0.1518.140",
+    "url": "https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=322eb0af-cdbc-4a17-a8ca-f0ace4d4adc8",
+    "sha256": "eac95c8095ec5f9971eade9827d8fb67fd251f5c16e702b5312d31067e39119b"
+  },
+  "dotnet": {
+    "version": "4.6.2",
+    "url": "https://download.microsoft.com/download/8/b/7/8b79adc2-162c-4cf4-a200-3aeaadc455bf/NDP462-KB3151800-x86-x64-AllOS-ENU.exe",
+    "sha256": "8550e370db2400aedb4397e9958f12041def3bb63c03cc7625ce07e09f42303e"
+  },
+  "compatibility": "https://blogs.windows.com/msedgedev/2022/12/09/microsoft-edge-and-webview2-ending-support-for-windows-7-and-windows-8-8-1/",
+  "extractor_sha256": "256feca8e274e5da655e2a284fabafd9f554365eb164862089dacd4e8276d282"
+}

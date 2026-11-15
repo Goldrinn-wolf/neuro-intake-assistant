@@ -1,0 +1,9 @@
+
+.closing-row{padding:14px 0;border-bottom:1px solid #e1e9e5}
+.closing-row h3{font-size:15px}.closing-row .spread button{font-size:12px;padding:4px 8px;color:#547568}
+.closing-row .lab{display:block;font-size:13px}
+.closing-row input{display:block;width:100%;padding:10px;border:1px solid #bed1c6;border-radius:6px;margin-top:7px;font:inherit}
+.closing-row input:disabled{background:#f0f3f1;color:#789084}
+.closing-warning{padding:9px 12px;background:#fff3dc;border-left:3px solid #b88018;font-size:13px;line-height:1.8;margin:10px 0}
+.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+

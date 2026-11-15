@@ -1,0 +1,34 @@
+const vm=require('vm'),fs=require('fs'),assert=require('node:assert/strict');
+const context=vm.createContext({console,localStorage:{getItem:()=>null,setItem:()=>{}},Date,Map,Set});
+for(const name of ['data.js','workflow.js','closing.js','story-rules.js','history-composition.js','narrative.js']){
+ const dir=name==='data.js'?'outputs/查房联动演示/assistant/':'work/neuro-intake/';
+ vm.runInContext(fs.readFileSync(dir+name,'utf8'),context);
+}
+const app=fs.readFileSync('work/neuro-intake/app.js','utf8');
+vm.runInContext(app.slice(0,app.indexOf('function fieldCard(')),context);
+vm.runInContext(fs.readFileSync('work/neuro-intake/examination-display.js','utf8'),context);
+vm.runInContext("function muscleRows(){return '<select data-grade>grade control</select>';}function reflexRows(){return '';}",context);
+const run=s=>vm.runInContext(s,context);
+run("active='draft';records.draft={answers:{},exams:{},topics:['dizzy'],profiles:['bppv'],workflow:'bppv'};var method={state:'notdone',picks:[],note:'原未查说明',grades:{},deferReason:'稍后补查'};record().exams.e53={method:'main',main:method};");
+run("updateDeferredNote(method,'暂未检查')");
+assert.equal(run('method.state'),'notdone');
+assert.equal(run("examText(CONTENT.exams.find(exam=>exam.id==='e53'))"),'');
+assert.equal(run("examComplete(CONTENT.exams.find(exam=>exam.id==='e53'))"),false);
+assert.equal(run("examinationResultValue(CONTENT.exams.find(exam=>exam.id==='e53')).note"),'');
+run("updateExaminationNote(method,'')");
+assert.equal(run('method.state'),'notdone');
+run("updateExaminationNote(method,'本次实际观察结果')");
+assert.equal(run('method.state'),'record');
+assert.equal(run('method.note'),'本次实际观察结果');
+assert.equal(run('method.previousLimitation.deferNote'),'暂未检查');
+assert.equal(run('method.previousLimitation.note'),'原未查说明');
+assert.equal(run('method.deferReason'),'');
+run("method.state='unable';updateExaminationNote(method,'疼痛影响评估')");
+assert.equal(run('method.state'),'unable');
+run("resumeExamination(method);updateExaminationNote(method,'新记录的实际所见')");
+assert.equal(run('method.state'),'record');
+run("record().exams.e23={method:'main',main:{state:'notdone',picks:[],grades:{'左肩外展':'5'},note:'旧说明'}}");
+assert.equal(run("Object.keys(examinationResultValue(CONTENT.exams.find(exam=>exam.id==='e23')).grades).length"),0);
+assert(run("quickExaminationAction(CONTENT.exams.find(exam=>exam.id==='e23'))").includes('均Ⅴ级'));
+assert(run("examinationControls(CONTENT.exams.find(exam=>exam.id==='e23'))").includes('data-grade'));
+console.log('PASS: unperformed notes stay separate; actual findings save directly without a start step; old notes and grades are not reused as new findings; shortcuts remain available.');

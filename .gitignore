@@ -1,0 +1,34 @@
+# Generated programs and downloaded redistributables
+*.exe
+*.dll
+*.pdb
+*.zip
+*.cab
+*.nupkg
+**/bin/
+**/obj/
+**/.vs/
+**/__pycache__/
+*.pyc
+.DS_Store
+# User records and local runtime profiles
+**/Profile/
+**/EBWebView/
+**/User Data/
+**/Local Storage/
+**/IndexedDB/
+*.log
+*.dmp
+*.db
+.env
+.env.*
+*.pem
+*.key
+work/desktop/compat/
+outputs/神内问诊助手*/
+
+# Generated executable configuration copies
+*.exe.config
+
+outputs/*
+!outputs/查房联动演示/
